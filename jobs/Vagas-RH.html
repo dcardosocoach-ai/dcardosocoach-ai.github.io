@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vagas de RH</title>
+<title>Portal de Vagas RH</title>
+
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -11,64 +12,86 @@ body {
   margin: 0;
   padding: 20px;
 }
+
 h1 {
   text-align: center;
+  margin-bottom: 30px;
 }
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
+
 .card {
   background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: 0.2s;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
 .card img {
   width: 50px;
 }
+
 .tags span {
   background: #e0ecff;
-  padding: 5px 8px;
-  border-radius: 8px;
-  margin: 2px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  margin: 3px;
   display: inline-block;
   font-size: 12px;
 }
+
 .score {
   font-weight: bold;
-  color: #2a7;
+  color: #1a7f37;
+  margin-top: 10px;
 }
+
 button {
   background: #007bff;
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+button:hover {
+  background: #0056b3;
 }
 </style>
 </head>
+
 <body>
 
-<h1>Vagas de RH - Brasil</h1>
+<h1>Portal de Vagas de RH - Brasil</h1>
 
 <div class="grid">
 
-<!-- VAGAS REAIS COM LINKS FUNCIONANDO -->
+<!-- VAGAS COM PÁGINA PRÓPRIA -->
 
 <div class="card">
 <img src="https://via.placeholder.com/50">
 <h3>Ambev</h3>
 <p><strong>Analista de RH Pleno</strong></p>
-<p>São Paulo - SP</p>
+<p>São Paulo - SP | Hybrid</p>
 <div class="tags">
-<span>Recrutamento</span><span>Cultura Organizacional</span><span>Gestão de Pessoas</span>
+<span>Recrutamento</span>
+<span>Gestão de Pessoas</span>
+<span>Cultura Organizacional</span>
 </div>
-<p class="score">Score: 88</p>
-<a href="https://ambev.gupy.io/" target="_blank">
+<p class="score">Score: 91</p>
+<a href="vaga-rh-001.html">
 <button>Ver vaga</button>
 </a>
 </div>
@@ -77,68 +100,62 @@ button {
 <img src="https://via.placeholder.com/50">
 <h3>Magazine Luiza</h3>
 <p><strong>Analista de RH Junior</strong></p>
-<p>Franca - SP</p>
+<p>Franca - SP | On-site</p>
 <div class="tags">
-<span>Treinamento</span><span>Recrutamento</span><span>Gestão de Pessoas</span>
+<span>Treinamento</span>
+<span>Recrutamento</span>
+<span>Gestão de Pessoas</span>
 </div>
-<p class="score">Score: 85</p>
-<a href="https://carreiras.magazineluiza.com.br/" target="_blank">
+<p class="score">Score: 87</p>
+<a href="vaga-rh-002.html">
 <button>Ver vaga</button>
 </a>
 </div>
 
 <div class="card">
 <img src="https://via.placeholder.com/50">
-<h3>Via (Casas Bahia)</h3>
-<p><strong>Coordenador de RH</strong></p>
-<p>São Paulo - SP</p>
-<div class="tags">
-<span>Cultura Organizacional</span><span>Gestão de Pessoas</span><span>Treinamento</span>
-</div>
-<p class="score">Score: 90</p>
-<a href="https://via.gupy.io/" target="_blank">
-<button>Ver vaga</button>
-</a>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>LinkedIn Jobs</h3>
-<p><strong>Analista de RH Senior</strong></p>
-<p>Remoto - Brasil</p>
-<div class="tags">
-<span>Recrutamento</span><span>Folha de Pagamento</span><span>Gestão de Pessoas</span>
-</div>
-<p class="score">92</p>
-<a href="https://www.linkedin.com/jobs/search/?keywords=Analista%20de%20RH" target="_blank">
-<button>Ver vaga</button>
-</a>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>InfoJobs</h3>
-<p><strong>Analista de RH</strong></p>
-<p>Brasil</p>
-<div class="tags">
-<span>Recrutamento</span><span>Treinamento</span><span>Folha de Pagamento</span>
-</div>
-<p class="score">80</p>
-<a href="https://www.infojobs.com.br/vagas-de-analista-de-rh.aspx" target="_blank">
-<button>Ver vaga</button>
-</a>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>Gupy Vagas</h3>
+<h3>XP Inc</h3>
 <p><strong>Gerente de RH</strong></p>
-<p>Brasil</p>
+<p>São Paulo - SP | Hybrid</p>
 <div class="tags">
-<span>Gestão de Pessoas</span><span>Cultura Organizacional</span><span>Treinamento</span>
+<span>Gestão de Pessoas</span>
+<span>Cultura Organizacional</span>
+<span>Treinamento</span>
 </div>
-<p class="score">87</p>
-<a href="https://portal.gupy.io/job-search/term=RH" target="_blank">
+<p class="score">Score: 94</p>
+<a href="vaga-rh-003.html">
+<button>Ver vaga</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/50">
+<h3>Stone</h3>
+<p><strong>Coordenador de RH</strong></p>
+<p>Rio de Janeiro - RJ | On-site</p>
+<div class="tags">
+<span>Folha de Pagamento</span>
+<span>Gestão de Pessoas</span>
+<span>Recrutamento</span>
+</div>
+<p class="score">Score: 89</p>
+<a href="vaga-rh-004.html">
+<button>Ver vaga</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/50">
+<h3>iFood</h3>
+<p><strong>Diretor de RH</strong></p>
+<p>Remoto - Brasil | Remote</p>
+<div class="tags">
+<span>Cultura Organizacional</span>
+<span>Gestão de Pessoas</span>
+<span>Treinamento</span>
+</div>
+<p class="score">Score: 96</p>
+<a href="vaga-rh-005.html">
 <button>Ver vaga</button>
 </a>
 </div>
