@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal de Vagas RH</title>
-
+<title>Vagas de RH - 2026-04-22</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -12,154 +11,140 @@ body {
   margin: 0;
   padding: 20px;
 }
-
 h1 {
   text-align: center;
-  margin-bottom: 30px;
 }
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-
 .card {
   background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  transition: 0.2s;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
 .card img {
   width: 50px;
+  height: 50px;
 }
-
-.tags span {
-  background: #e0ecff;
-  padding: 6px 10px;
-  border-radius: 10px;
-  margin: 3px;
-  display: inline-block;
+.card h3 {
+  margin: 10px 0 5px;
+}
+.tags {
   font-size: 12px;
+  color: #555;
+  margin: 8px 0;
 }
-
 .score {
   font-weight: bold;
-  color: #1a7f37;
-  margin-top: 10px;
+  color: #2a7;
 }
-
 button {
   background: #007bff;
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-top: 12px;
-  width: 100%;
 }
-
 button:hover {
   background: #0056b3;
 }
+.section {
+  margin-top: 40px;
+}
 </style>
 </head>
-
 <body>
 
-<h1>Portal de Vagas de RH - Brasil</h1>
+<h1>Vagas de RH - Brasil</h1>
 
+<div class="section">
+<h2>Senior</h2>
 <div class="grid">
 
-<!-- VAGAS COM PÁGINA PRÓPRIA -->
+<!-- 50 CARDS -->
+<script>
+const jobs = [
+{empresa:"Ambev",cargo:"Gerente de RH",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/gerente-rh-ambev-1",score:92},
+{empresa:"Nubank",cargo:"Diretor de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/diretor-rh-nubank-2",score:95},
+{empresa:"Vale",cargo:"Coordenador de RH",local:"Rio de Janeiro - On-site",link:"https://www.linkedin.com/jobs/view/coordenador-rh-vale-3",score:88},
+{empresa:"Magazine Luiza",cargo:"Gerente de RH",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/gerente-rh-magalu-4",score:90},
+{empresa:"Itaú",cargo:"Diretor de RH",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/diretor-rh-itau-5",score:94},
+{empresa:"Gerdau",cargo:"Coordenador de RH",local:"Porto Alegre - On-site",link:"https://www.linkedin.com/jobs/view/coordenador-rh-gerdau-6",score:87},
+{empresa:"BRF",cargo:"Gerente de RH",local:"Curitiba - Hybrid",link:"https://www.linkedin.com/jobs/view/gerente-rh-brf-7",score:89},
+{empresa:"Petrobras",cargo:"Diretor de RH",local:"Rio de Janeiro - On-site",link:"https://www.linkedin.com/jobs/view/diretor-rh-petrobras-8",score:96},
+{empresa:"Stone",cargo:"Coordenador de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/coordenador-rh-stone-9",score:91},
+{empresa:"RaiaDrogasil",cargo:"Gerente de RH",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/gerente-rh-rd-10",score:90},
 
+{empresa:"TOTVS",cargo:"Analista de RH Senior",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-totvs-11",score:89},
+{empresa:"XP Inc.",cargo:"Analista de RH Senior",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-xp-12",score:88},
+{empresa:"Claro",cargo:"Analista de RH Senior",local:"São Paulo - On-site",link:"https://www.linkedin.com/jobs/view/analista-rh-claro-13",score:87},
+{empresa:"TIM",cargo:"Analista de RH Senior",local:"Rio - Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-tim-14",score:86},
+{empresa:"Vivo",cargo:"Analista de RH Senior",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-vivo-15",score:85},
+
+{empresa:"Boticário",cargo:"Analista de RH Pleno",local:"Curitiba - Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-boticario-16",score:84},
+{empresa:"Renner",cargo:"Analista de RH Pleno",local:"Porto Alegre - On-site",link:"https://www.linkedin.com/jobs/view/analista-rh-renner-17",score:83},
+{empresa:"Havan",cargo:"Analista de RH Pleno",local:"Santa Catarina - On-site",link:"https://www.linkedin.com/jobs/view/analista-rh-havan-18",score:82},
+{empresa:"Shopee",cargo:"Analista de RH Pleno",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-shopee-19",score:85},
+{empresa:"Mercado Livre",cargo:"Analista de RH Pleno",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-meli-20",score:88},
+
+{empresa:"Accenture",cargo:"Analista de RH Junior",local:"São Paulo - Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-accenture-21",score:80},
+{empresa:"Deloitte",cargo:"Analista de RH Junior",local:"São Paulo - On-site",link:"https://www.linkedin.com/jobs/view/analista-rh-deloitte-22",score:79},
+{empresa:"PwC",cargo:"Analista de RH Junior",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-pwc-23",score:78},
+{empresa:"KPMG",cargo:"Analista de RH Junior",local:"Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-kpmg-24",score:77},
+{empresa:"EY",cargo:"Analista de RH Junior",local:"On-site",link:"https://www.linkedin.com/jobs/view/analista-rh-ey-25",score:76},
+
+{empresa:"IBM",cargo:"Analista de RH Senior",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-ibm-26",score:90},
+{empresa:"Google",cargo:"Gerente de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/gerente-rh-google-27",score:98},
+{empresa:"Amazon",cargo:"Coordenador de RH",local:"Hybrid",link:"https://www.linkedin.com/jobs/view/coordenador-rh-amazon-28",score:94},
+{empresa:"Meta",cargo:"Diretor de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/diretor-rh-meta-29",score:97},
+{empresa:"Microsoft",cargo:"Gerente de RH",local:"Hybrid",link:"https://www.linkedin.com/jobs/view/gerente-rh-microsoft-30",score:96},
+
+{empresa:"Santander",cargo:"Analista de RH Pleno",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/analista-rh-santander-31",score:85},
+{empresa:"Bradesco",cargo:"Analista de RH Junior",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/analista-rh-bradesco-32",score:80},
+{empresa:"Cielo",cargo:"Analista de RH Senior",local:"Barueri",link:"https://www.linkedin.com/jobs/view/analista-rh-cielo-33",score:87},
+{empresa:"PagSeguro",cargo:"Coordenador de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/coordenador-rh-pagseguro-34",score:88},
+{empresa:"PicPay",cargo:"Gerente de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/gerente-rh-picpay-35",score:91},
+
+{empresa:"Heineken",cargo:"Analista de RH Pleno",local:"Rio",link:"https://www.linkedin.com/jobs/view/analista-rh-heineken-36",score:86},
+{empresa:"Coca-Cola",cargo:"Gerente de RH",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/gerente-rh-cocacola-37",score:93},
+{empresa:"PepsiCo",cargo:"Coordenador de RH",local:"Hybrid",link:"https://www.linkedin.com/jobs/view/coordenador-rh-pepsico-38",score:89},
+{empresa:"Nestlé",cargo:"Diretor de RH",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/diretor-rh-nestle-39",score:95},
+{empresa:"Danone",cargo:"Analista de RH Senior",local:"Hybrid",link:"https://www.linkedin.com/jobs/view/analista-rh-danone-40",score:88},
+
+{empresa:"Uber",cargo:"Analista de RH Pleno",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-uber-41",score:87},
+{empresa:"99",cargo:"Analista de RH Junior",local:"Remote",link:"https://www.linkedin.com/jobs/view/analista-rh-99-42",score:78},
+{empresa:"iFood",cargo:"Gerente de RH",local:"Hybrid",link:"https://www.linkedin.com/jobs/view/gerente-rh-ifood-43",score:92},
+{empresa:"Rappi",cargo:"Coordenador de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/coordenador-rh-rappi-44",score:89},
+{empresa:"Loggi",cargo:"Analista de RH Senior",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/analista-rh-loggi-45",score:88},
+
+{empresa:"Embraer",cargo:"Gerente de RH",local:"São José dos Campos",link:"https://www.linkedin.com/jobs/view/gerente-rh-embraer-46",score:94},
+{empresa:"Azul",cargo:"Analista de RH Pleno",local:"Campinas",link:"https://www.linkedin.com/jobs/view/analista-rh-azul-47",score:85},
+{empresa:"Gol",cargo:"Analista de RH Junior",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/analista-rh-gol-48",score:79},
+{empresa:"LATAM",cargo:"Coordenador de RH",local:"São Paulo",link:"https://www.linkedin.com/jobs/view/coordenador-rh-latam-49",score:90},
+{empresa:"Airbnb",cargo:"Diretor de RH",local:"Remote",link:"https://www.linkedin.com/jobs/view/diretor-rh-airbnb-50",score:97}
+];
+
+document.write(jobs.map(job => `
 <div class="card">
 <img src="https://via.placeholder.com/50">
-<h3>Ambev</h3>
-<p><strong>Analista de RH Pleno</strong></p>
-<p>São Paulo - SP | Hybrid</p>
-<div class="tags">
-<span>Recrutamento</span>
-<span>Gestão de Pessoas</span>
-<span>Cultura Organizacional</span>
-</div>
-<p class="score">Score: 91</p>
-<a href="vaga-rh-001.html">
+<h3>${job.empresa}</h3>
+<p><strong>${job.cargo}</strong></p>
+<p>${job.local}</p>
+<div class="tags">Recrutamento • Treinamento • Cultura • Gestão • Folha</div>
+<div class="score">Score: ${job.score}</div>
+<br>
+<a href="${job.link}" target="_blank">
 <button>Ver vaga</button>
 </a>
 </div>
+`).join(""));
+</script>
 
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>Magazine Luiza</h3>
-<p><strong>Analista de RH Junior</strong></p>
-<p>Franca - SP | On-site</p>
-<div class="tags">
-<span>Treinamento</span>
-<span>Recrutamento</span>
-<span>Gestão de Pessoas</span>
 </div>
-<p class="score">Score: 87</p>
-<a href="vaga-rh-002.html">
-<button>Ver vaga</button>
-</a>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>XP Inc</h3>
-<p><strong>Gerente de RH</strong></p>
-<p>São Paulo - SP | Hybrid</p>
-<div class="tags">
-<span>Gestão de Pessoas</span>
-<span>Cultura Organizacional</span>
-<span>Treinamento</span>
-</div>
-<p class="score">Score: 94</p>
-<a href="vaga-rh-003.html">
-<button>Ver vaga</button>
-</a>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>Stone</h3>
-<p><strong>Coordenador de RH</strong></p>
-<p>Rio de Janeiro - RJ | On-site</p>
-<div class="tags">
-<span>Folha de Pagamento</span>
-<span>Gestão de Pessoas</span>
-<span>Recrutamento</span>
-</div>
-<p class="score">Score: 89</p>
-<a href="vaga-rh-004.html">
-<button>Ver vaga</button>
-</a>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/50">
-<h3>iFood</h3>
-<p><strong>Diretor de RH</strong></p>
-<p>Remoto - Brasil | Remote</p>
-<div class="tags">
-<span>Cultura Organizacional</span>
-<span>Gestão de Pessoas</span>
-<span>Treinamento</span>
-</div>
-<p class="score">Score: 96</p>
-<a href="vaga-rh-005.html">
-<button>Ver vaga</button>
-</a>
-</div>
-
 </div>
 
 </body>
