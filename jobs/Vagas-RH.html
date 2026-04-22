@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vagas RH e TI</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 50px;
+}
+.tags span {
+  background: #e0e7ff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.score {
+  font-weight: bold;
+  color: #2563eb;
+}
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Vagas de RH e TI - Brasil</h1>
+
+<div class="grid">
+
+<!-- 50 CARDS -->
+<!-- Gerado automaticamente -->
+
+<script>
+const vagas = [];
+
+const cargos = [
+"Analista de RH Junior","Analista de RH Pleno","Analista de RH Senior",
+"Coordenador de RH","Gerente de RH","Diretor de RH","Estagiário em TI"
+];
+
+const empresas = ["TechCorp","InovaRH","PeopleFirst","GlobalTech","RH Solutions","TalentX","NextGen","Alpha Corp","Beta Ltda","VisionRH"];
+
+const tagsRH = ["Recrutamento","Treinamento","Folha de Pagamento","Cultura Organizacional","Gestão de Pessoas"];
+const tagsTI = ["Suporte","Infraestrutura","Help Desk","Redes","Sistemas"];
+
+for(let i=0;i<50;i++){
+  const cargo = cargos[Math.floor(Math.random()*cargos.length)];
+  const empresa = empresas[Math.floor(Math.random()*empresas.length)];
+  const isTI = cargo.includes("TI");
+  const tags = isTI ? tagsTI : tagsRH;
+  const nivel = cargo.includes("Junior") || cargo.includes("Estagiário") ? "Junior" :
+                cargo.includes("Pleno") ? "Pleno" : "Senior";
+  const tipo = ["Remote","Hybrid","On-site"][Math.floor(Math.random()*3)];
+  const score = Math.floor(Math.random()*41)+60;
+
+  vagas.push(`
+  <div class="card">
+    <img src="https://via.placeholder.com/50">
+    <h3>${empresa}</h3>
+    <p><strong>${cargo}</strong></p>
+    <p>Brasil - ${tipo}</p>
+    <div class="tags">
+      ${tags.map(t=>`<span>${t}</span>`).join("")}
+    </div>
+    <p class="score">Score: ${score}</p>
+    <a href="https://example.com/job" target="_blank">
+      <button>Ver vaga</button>
+    </a>
+  </div>
+  `);
+}
+
+document.write(vagas.join(""));
+
+</script>
+
+</div>
+
+</body>
+</html>
